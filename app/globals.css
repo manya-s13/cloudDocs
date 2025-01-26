@@ -360,13 +360,13 @@
 
   /* Header */
   .header {
-    @apply hidden items-center justify-between gap-5 p-5 sm:flex lg:py-7 xl:gap-10 !important;
+    @apply hidden justify-between text-center gap-5 p-5 sm:flex lg:py-7 xl:gap-10;
   }
   .header-wrapper {
-    @apply flex-center min-w-fit gap-4 !important;
+    @apply flex min-w-fit gap-4;
   }
   .sign-out-button {
-    @apply flex-center h-[52px] min-w-[54px] items-center rounded-full bg-brand/10 p-0 text-brand shadow-none transition-all hover:bg-brand/20 !important;
+    @apply flex justify-center h-[52px] min-w-[54px] items-center rounded-full bg-brand/10 p-0 text-brand shadow-none transition-all hover:bg-brand/20;
   }
 
   /* Mobile Navigation */

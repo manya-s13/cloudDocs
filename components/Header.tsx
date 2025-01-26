@@ -5,9 +5,9 @@ import FileUploader from './FileUploader'
 import Search from './Search'
 
 const Header = () => {
-  return <header>
+  return ( <header className='header'>
     <Search />
-    <div>
+    <div className='header-wrapper'>
         <FileUploader />
 
         <form>
@@ -21,6 +21,7 @@ const Header = () => {
         </form>
     </div>
   </header>
+  );
 }
 
 export default Header
