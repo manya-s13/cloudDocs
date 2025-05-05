@@ -18,6 +18,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import FileUploader from "./FileUploader";
+import { signOutUser } from "@/lib/actions/user.actions";
 
 interface Props {
   ownerId: string;
@@ -74,7 +75,7 @@ function MobileNavigation({ownerId, accountId, fullName, avatar, email}: Props) 
             
             <FileUploader />
 
-            <Button type='submit' className='mobile-sign-out-button' onClick={() => {}}>
+            <Button type='submit' className='mobile-sign-out-button' onClick={ async () => await signOutUser()}>
                 <Image src='/assets/icons/logout.svg'
                 alt='logo'
                 width={24}

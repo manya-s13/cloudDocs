@@ -9,7 +9,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Filefy",
+  title: "CloudDocs",
   description: "A place to store all your documents and files",
 };
 
