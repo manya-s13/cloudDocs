@@ -21,22 +21,22 @@ import FileUploader from "./FileUploader";
 import { signOutUser } from "@/lib/actions/user.actions";
 
 interface Props {
-  ownerId: string;
+  $id: string;
   accountId: string;
   fullName: string;
   avatar: string;
   email: string;
 }
 
-function MobileNavigation({ownerId, accountId, fullName, avatar, email}: Props) {
+function MobileNavigation({$id: ownerId, accountId, fullName, avatar, email}: Props) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
   return <header className="mobile-header">
-    <Image src="/assets/icons/logo-full-brand.svg"
+    <Image src="/logo2.png"
     alt="logo"
-    width={120}
-    height={52}
+    width={200}
+    height={200}
     className="h-auto" />
 
 <Sheet open={open} onOpenChange={setOpen}>
@@ -73,7 +73,7 @@ function MobileNavigation({ownerId, accountId, fullName, avatar, email}: Props) 
 
       <div className="flex flex-col justify-between gap-5 pb-5">
             
-            <FileUploader />
+            <FileUploader ownerId={ownerId} accountId={accountId} />
 
             <Button type='submit' className='mobile-sign-out-button' onClick={ async () => await signOutUser()}>
                 <Image src='/assets/icons/logout.svg'

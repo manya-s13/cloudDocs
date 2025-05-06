@@ -16,15 +16,15 @@ interface Props{
 const Sidebar = ({ fullName, avatar, email }: Props)  => {
     const pathname = usePathname();
 
-  return( <aside className='sidebar'>
+  return( <aside className='sidebar pt-4'>
     <Link href="/" >
-    <Image src='/assets/icons/logo-full-brand.svg'
+    {/* <Image src='/logo2.png'
     alt='logo'
-    width={160}
-    height={50}
-    className='hidden h-auto lg:block' />
+    width={200}
+    height={200}
+    className='hidden h-auto lg:block' /> */}
 
-    <Image src='/assets/icons/logo-brand.svg' alt='logo' 
+    <Image src='/logo2.png' alt='logo' 
     width={52}
     height={52}
     className='lg:hidden' />
@@ -32,7 +32,7 @@ const Sidebar = ({ fullName, avatar, email }: Props)  => {
 
 
     <nav className='sidebar-nav'>
-        <ul className='flex flex-1 flex-col gap-6'>
+        <ul className='flex flex-1 flex-col gap-2'>
             {navItems.map(({url, name, icon}) => (
                 <Link key={name} href={url} className='lg:w-full' >
                     <li className={cn("sidebar-nav-item", pathname===url && 'shad-active',)}>
